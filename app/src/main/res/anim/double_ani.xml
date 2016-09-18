@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:interpolator="@android:anim/linear_interpolator"
+    android:shareInterpolator="true">
+    <!-- Interpolator定义了动画变化的速率，在Animations框架当中定义了一下几种Interpolator
+         AccelerateDecelerateInterpolator：在动画开始与结束的地方速率改变比较慢，在中间的时候速率快。
+         AccelerateInterpolator：在动画开始的地方速率改变比较慢，然后开始加速
+         CycleInterpolator：动画循环播放特定的次数，速率改变沿着正弦曲线
+         DecelerateInterpolator：在动画开始的地方速率改变比较慢，然后开始减速
+         LinearInterpolator：动画以均匀的速率改变-->
+
+<!--2、如果在一个set标签中包含多个动画效果，如果想让这些动画效果共享一个Interpolator。
+    android:shareInterpolator="true"-->
+
+    <!-- fromAlpha和toAlpha是起始透明度和结束时透明度 -->
+    <alpha
+        android:fromAlpha="1.0"
+        android:toAlpha="0.0"
+        android:duration="1000"/>
+    <translate
+        android:fromXDelta="0%"
+        android:toXDelta="100%"
+        android:fromYDelta="0%"
+        android:toYDelta="0%"
+
+        android:duration="1000"/>
+</set>
