@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false"
+    >
+    <item android:drawable="@drawable/q11q" android:duration="150"></item>
+    <item android:drawable="@drawable/q22q" android:duration="150"></item>
+    <item android:drawable="@drawable/q33q" android:duration="150"></item>
+    <item android:drawable="@drawable/q44q" android:duration="150"></item>
+    <item android:drawable="@drawable/q55q" android:duration="150"></item>
+    <item android:drawable="@drawable/q66q" android:duration="150"></item>
+</animation-list>

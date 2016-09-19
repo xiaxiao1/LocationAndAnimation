@@ -6,6 +6,7 @@
     android:gravity="center_horizontal"
     android:orientation="vertical"
     android:padding="16dp"
+              android:layoutAnimation="@anim/anim_layout"
     >
 
     <TextView
@@ -42,7 +43,7 @@
         android:id="@+id/img2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/icon" />
+        android:background="@drawable/q11q" />
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

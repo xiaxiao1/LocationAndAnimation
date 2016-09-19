@@ -1,10 +1,15 @@
 package com.example.xiaxiao.locationandanimation;
 
+import android.content.Intent;
+import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
+import android.view.animation.AnimationSet;
 import android.view.animation.AnimationUtils;
+import android.view.animation.RotateAnimation;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -18,7 +23,8 @@ public class main_activity extends AppCompatActivity implements View.OnClickList
     private Button scaleButton = null;
     private Button alphaButton = null;
     private Button translateButton = null;
-
+    AnimationSet animationSet;
+    AnimationDrawable animationDrawable;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,23 +38,37 @@ public class main_activity extends AppCompatActivity implements View.OnClickList
         int id = v.getId();
         switch (id) {
             case R.id.tv1:
-
+                startActivity(new Intent(this,Test1.class));
                 break;
             case R.id.tv2:
 
                 break;
             case R.id.btn1:
-                img1.setVisibility(View.INVISIBLE);
-                showAnimation(R.anim.double_ani,img1);
+                /*img1.setVisibility(View.INVISIBLE);
+                showAnimation(R.anim.double_ani,img1);*/
+
+                /*AnimationSet animationSet = new AnimationSet(true);
+                AlphaAnimation alphaAnimation = new AlphaAnimation(1, 0);
+                RotateAnimation rotateAnimation = new RotateAnimation(0, 360, Animation
+                        .RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
+                rotateAnimation.setDuration(1000);
+                animationSet.addAnimation(rotateAnimation);
+                animationSet.addAnimation(alphaAnimation);
+                img1.startAnimation(animationSet);*/
+                showAnimation(R.anim.double_ani,img2);
                 break;
             case R.id.btn2:
+
+                img2.setBackgroundResource(R.drawable.animation_list);
+                animationDrawable=(AnimationDrawable)img2.getBackground();
+                animationDrawable.start();
 
                 break;
             case R.id.img1:
 
                 break;
             case R.id.img2:
-
+                animationDrawable.stop();
                 break;
             case R.id.alphaButton:
                 showAnimation(R.anim.alpha,btn1);
